@@ -1,0 +1,143 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Coba Dokumentasi API",
+        "description": "Lorem",
+        "version": "1.0.0 "
+    },
+    "host": "reqres.in",
+    "basePath": "/api",
+    "schemes": [
+        "https"
+    ],
+    "tags": [
+        {
+            "name": "Colors",
+            "description": "Menampilkan semua data colors"
+        }
+    ],
+    "paths": {
+        "/colors": {
+            "get": {
+                "tags": [
+                    "Colors"
+                ],
+                "summary": "Ambil semua warna",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/users": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Ambil semua users",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Regristrasi akun",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Berhasil Menambahkan User Baru"
+                    }
+                }
+            },
+        },
+        "/users/{ID}": {
+            "put": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "merubah akun",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "ID",
+                        "required": true
+                    },
+                    {
+                        "in": "body",
+                        "name": "data update",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Berhasil "
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "menghapus akun",
+                "description": "",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "ID",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Berhasil "
+                    }
+                }
+            }
+        },
+        "/resource": {
+            "get": {
+                "tags": [
+                    "resource"
+                ],
+                "summary": "Ambil semua users",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+       
+    }
+}
